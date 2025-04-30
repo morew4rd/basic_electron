@@ -1,36 +1,56 @@
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
 
-  background-color: #eeeeee;
-  color: #121212;
+    /* THEME */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #121212;
+    border: #444444 solid 1px;
+    border-radius: 10px; /* mac borders*/
 
-  border-style: solid;
+    /* DEBUG THEME OVERRIDES */
+    border: crimson solid 10px;
 
-  border-width: 1px;
-  border-radius: 10px;
-  width: 100vw;
-  height: 100vh;
-
-  overflow: hidden;
-  box-sizing: border-box;
-
-  border-color: #444444;
+    display: flex;
+    flex-direction: column;
 }
 
-.titlebar {
+#titlebar {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
   user-select: none;
   -webkit-user-select: none;
   -webkit-app-region: drag;
   background-color: #444444;
   color: #cacaca;
   text-align: center;
-  padding-top: 0.6rem;
-  height: 1.8rem;
+  height: 2.3rem;
+  max-height: 2.3rem;
+  padding-top: 10px;
+  flex-grow: 1;
+  /* DEBUG */
+  border: darkorange solid 10px;
 }
 
-.titlebar-button {
+#titlebar button, input {
   -webkit-app-region: no-drag;
 }
 
+#appbody {
+    /* make app body fit  */
+    overflow: scroll; /* TODO: try clip*/
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    flex-grow: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* DEBUG */
+    border: darkgreen solid 10px;
+}
