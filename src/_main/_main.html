@@ -11,12 +11,14 @@
   <script src="../_scripts/jquery-3.7.1.min.js"> </script>
 </head>
 <body>
-  <div id="titlebar">My Electron App</div>
-  <div id="appbody"></div>
+  <div id="shell">
+    <div id="titlebar">My Electron App</div>
+    <div id="appbody"></div>
+  </div>
   <script>
     $(document).ready(function() {
       $('p').css('color', 'blue');
-      $("#titlebar").load("../titlebar/titlebar.html", (ev) => {
+      $("#titlebar").load("../_titlebar/titlebar.html", (ev) => {
         console.log("loaded titlebar.html");
       });
       $("#appbody").load("../app/app.html", (ev) => {
