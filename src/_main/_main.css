@@ -2,10 +2,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   padding: 0 0 0 0;
   margin: 0 0 0 0;
-  /* background-color: #ff5050; */
-
-  /* background-color: #000000aa; */
-  /* color: #cacaca; */
 
   background-color: #eeeeee;
   color: #121212;
@@ -38,10 +34,3 @@ body {
   -webkit-app-region: no-drag;
 }
 
-.appbody {
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
-  padding-left: 1rem;
-  /* padding-right: 1rem; */
-
-}

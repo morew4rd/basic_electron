@@ -14,8 +14,7 @@ const createWindow = () => {
   });
 
   // and load the index.html of the app.
-  mainWindow.loadFile(path.join(__dirname, 'index.html'));
-  mainWindow.setTitle("MyHelloWorldAppHaha");
+  mainWindow.loadFile(path.join(__dirname, '_main.html'));
   // Open the DevTools.
   // MG closed
   // mainWindow.webContents.openDevTools();

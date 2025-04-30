@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>My Electron App</title>
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
+  />
+  <link rel="stylesheet" href="_main.css" />
+  <script src="../_scripts/jquery-3.7.1.min.js"> </script>
+</head>
+<body>
+  <div class="titlebar">My Electron App</div>
+  <div id="appbody"></div>
+  <script>
+    $(document).ready(function() {
+      $('p').css('color', 'blue');
+      $("#appbody").load("../app/app.html", (ev) => {
+        console.log("loaded app.html");
+      });
+    });
+  </script>
+</body>
+</html>

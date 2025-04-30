@@ -1,10 +1,9 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "main": "src/index.js",
+  "main": "src/_main/index.js",
   "scripts": {
     "dev:start": "electron .",
-
     "app:dir": "electron-builder --dir",
     "app:dist": "electron-builder"
   },
@@ -21,5 +20,8 @@
     "mac": {
       "category": "your.app.category.type"
     }
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
   }
 }
