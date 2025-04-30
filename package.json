@@ -20,8 +20,5 @@
     "mac": {
       "category": "your.app.category.type"
     }
-  },
-  "dependencies": {
-    "jquery": "^3.7.1"
   }
 }
