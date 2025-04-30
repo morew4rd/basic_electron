@@ -9,16 +9,19 @@
   />
   <link rel="stylesheet" href="css/_main.css" />
   <style>
-    #shell {
-      border-radius: 0px;  /* override: electron border radius */
+    body {
+      padding: 0 0 0 0;
+      margin: 0 0 0 0;
+      /* THEME */
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #ffffff00;
+      color: red;
     }
   </style>
   <script src="scripts/jquery-3.7.1.min.js"> </script>
 </head>
 <body>
-  <div id="shell">
-    <div id="appbody"></div>
-  </div>
+  <div id="appbody"></div>
   <script>
     $(document).ready(function() {
       $("#appbody").load("../app/app.html", (ev) => {
