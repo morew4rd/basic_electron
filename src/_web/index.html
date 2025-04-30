@@ -7,20 +7,21 @@
     http-equiv="Content-Security-Policy"
     content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
   />
-  <link rel="stylesheet" href="../_web/css/_main.css" />
-  <script src="../_web/scripts/jquery-3.7.1.min.js"> </script>
+  <link rel="stylesheet" href="css/_main.css" />
+  <style>
+    #shell {
+      border-radius: 0px;  /* override: electron border radius */
+    }
+  </style>
+  <script src="scripts/jquery-3.7.1.min.js"> </script>
 </head>
 <body>
   <div id="shell">
-    <div id="titlebar">My Electron App</div>
     <div id="appbody"></div>
   </div>
   <script>
     $(document).ready(function() {
-      $("#titlebar").load("./_titlebar.html", (ev) => {
-        console.log("loaded titlebar.html");
-      });
-      $("#appbody").load("../_web/app/app.html", (ev) => {
+      $("#appbody").load("../app/app.html", (ev) => {
         console.log("loaded app.html");
       });
     });

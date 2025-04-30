@@ -6,11 +6,14 @@
 
 show-help: --targets ## shows this help
 
-dev-prepare: ## prepares dev session (install packages, etc.)
+prepare-repo: ## prepares dev session (install packages, etc.)
 	npm i
 
 dev-start:	## short for "npm run dev:start"
 	npm run dev:start
+
+dev-start-web: ## start the web version
+	npx http-server src/_web/
 
 app-dir:	## short for "npm run app:dir"
 	npm run app:dir

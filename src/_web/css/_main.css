@@ -31,6 +31,7 @@ body {
   border-style: solid;
   border-width: 1px;;
   border-radius: 11px;
+
   -electron-corner-smoothing: system-ui;
   /* DEBUG THEME OVERRIDES */
   /* border: crimson solid 5px; */
