@@ -15,7 +15,7 @@ body {
     border-radius: 10px; /* mac borders*/
 
     /* DEBUG THEME OVERRIDES */
-    border: crimson solid 10px;
+    /* border: crimson solid 10px; */
 
     display: flex;
     flex-direction: column;
@@ -35,7 +35,7 @@ body {
   padding-top: 10px;
   flex-grow: 1;
   /* DEBUG */
-  border: darkorange solid 10px;
+  /* border: darkorange solid 10px; */
 }
 
 #titlebar button, input {
@@ -52,5 +52,5 @@ body {
     display: flex;
     flex-direction: column;
     /* DEBUG */
-    border: darkgreen solid 10px;
+    /* border: darkgreen solid 10px; */
 }
