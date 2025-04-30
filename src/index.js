@@ -9,8 +9,10 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1024,
+    height: 768,
+    transparent: true,
+    titleBarStyle: 'hiddenInset',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
     },
@@ -18,9 +20,10 @@ const createWindow = () => {
 
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
-
+  mainWindow.setTitle("MyHelloWorldAppHaha");
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // MG closed
+  // mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
