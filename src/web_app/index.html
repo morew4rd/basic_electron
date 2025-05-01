@@ -12,11 +12,17 @@
     body {
       /* WEB APP SPECIFIC THINGS HERE */
     }
+
+    #appbody {
+      max-height: 100vh;
+    }
   </style>
   <script src="public/jquery-3.7.1.min.js"> </script>
 </head>
 <body>
-  <div id="appbody"></div>
+  <div id="shell">
+    <div id="appbody"></div>
+  </div>
   <script>
     $(document).ready(function() {
       $("#appbody").load("./app/app.html", (ev) => {
