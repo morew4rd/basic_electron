@@ -1,0 +1,10 @@
+body {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    /* THEME */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    /* DEBUG. app overrides these */
+    /* background-color: #ffffff00;    TRANSPARENT!!!!!!!!! */
+    background-color: turquoise;
+    color: red;
+  }

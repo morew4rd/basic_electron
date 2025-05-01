@@ -7,24 +7,19 @@
     http-equiv="Content-Security-Policy"
     content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
   />
-  <link rel="stylesheet" href="css/_main.css" />
+  <link rel="stylesheet" href="./public/app_shared.css" />
   <style>
     body {
-      padding: 0 0 0 0;
-      margin: 0 0 0 0;
-      /* THEME */
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff00;
-      color: red;
+      /* WEB APP SPECIFIC THINGS HERE */
     }
   </style>
-  <script src="scripts/jquery-3.7.1.min.js"> </script>
+  <script src="public/jquery-3.7.1.min.js"> </script>
 </head>
 <body>
   <div id="appbody"></div>
   <script>
     $(document).ready(function() {
-      $("#appbody").load("../app/app.html", (ev) => {
+      $("#appbody").load("./app/app.html", (ev) => {
         console.log("loaded app.html");
       });
     });

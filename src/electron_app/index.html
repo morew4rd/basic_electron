@@ -6,21 +6,13 @@
   <title>My Electron App</title>
   <meta http-equiv="Content-Security-Policy"
     content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'" />
-  <link rel="stylesheet" href="../_web/css/_main.css" />
+  <link rel="stylesheet" href="../web_app/public/app_shared.css" />
   <style>
     body {
       display: flex;
       flex-direction: column;
-
       width: 100vw;
       height: 100vh;
-      padding: 0 0 0 0;
-      margin: 0 0 0 0;
-
-      /* THEME */
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #ffffff00;
-      color: red;
     }
 
     #shell {
@@ -53,8 +45,9 @@
       -webkit-user-select: none;
       -webkit-app-region: drag;
       text-align: center;
-      max-height: 2.8rem;
+      max-height: 2.2rem;
       flex-grow: 1;
+      overflow: hidden;
 
       /* DEBUG */
       /* background-color: #0000ff44; color: #ff0000; */
@@ -81,12 +74,14 @@
 
 
   </style>
-  <script src="../_web/scripts/jquery-3.7.1.min.js"> </script>
+  <script src="../web_app/public/jquery-3.7.1.min.js"> </script>
 </head>
 
 <body>
+
   <div id="shell">
     <div id="titlebar">
+      <!--
       <div style="height: 100%;  background-color: #434343ff; color: #f9f9f9;">
         <div style="padding-top: 10px">
           <span>My App </span>
@@ -94,16 +89,24 @@
           <button>Bla</button>
         </div>
       </div>
+      -->
+      <div style="height: 100%;  padding-top: 0.5rem; background-color: #434343ff; color: #e0e0e0;">
+        My Electron App
+      </div>
     </div>
+
     <div id="appbody"></div>
+
   </div>
+
   <script>
     $(document).ready(function () {
-      $("#appbody").load("../_web/app/app.html", (ev) => {
+      $("#appbody").load("../web_app/app/app.html", (ev) => {
         console.log("loaded app.html");
       });
     });
   </script>
+
 </body>
 
 </html>

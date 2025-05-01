@@ -13,7 +13,7 @@ dev-start:	## short for "npm run dev:start"
 	npm run dev:start
 
 dev-start-web: ## start the web version
-	npx http-server src/_web/
+	npx http-server src/web_app/
 
 app-dir:	## short for "npm run app:dir"
 	npm run app:dir
