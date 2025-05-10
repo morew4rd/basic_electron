@@ -13,7 +13,7 @@
       /* WEB APP SPECIFIC THINGS HERE */
     }
 
-    #appbody {
+    #shell {
       max-height: 100vh;
     }
   </style>
@@ -21,11 +21,19 @@
 </head>
 <body>
   <div id="shell">
+    <div id="toolbar"></div>
     <div id="appbody"></div>
+    <div id="statusbar"></div>
   </div>
   <script>
     $(document).ready(function() {
-      $("#appbody").load("./app/app.html", (ev) => {
+      $("#toolbar").load("../app/app_toolbar.html", (ev) => {
+        console.log("loaded app_toolbar.html");
+      });
+      $("#statusbar").load("../app/app_statusbar.html", (ev) => {
+        console.log("loaded app_statusbar.html");
+      });
+      $("#appbody").load("../app/app.html", (ev) => {
         console.log("loaded app.html");
       });
     });

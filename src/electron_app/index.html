@@ -10,7 +10,8 @@
   <style>
     body {
       /* Electron specific things here */
-
+      padding: 0;
+      margin: 0;
     }
 
     #shell {
@@ -72,12 +73,19 @@
       </div>
     </div>
 
+    <div id="toolbar"></div>
     <div id="appbody"></div>
-
+    <div id="statusbar"></div>
   </div>
 
   <script>
     $(document).ready(function () {
+      $("#toolbar").load("../web_app/app/app_toolbar.html", (ev) => {
+        console.log("loaded app_toolbar.html");
+      });
+      $("#statusbar").load("../web_app/app/app_statusbar.html", (ev) => {
+        console.log("loaded app_statusbar.html");
+      });
       $("#appbody").load("../web_app/app/app.html", (ev) => {
         console.log("loaded app.html");
       });
