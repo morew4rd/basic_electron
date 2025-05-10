@@ -1,46 +1,48 @@
 body {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  /* THEME */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* DEBUG. app overrides these */
+  background-color: #ffff0000; /* transparent yellow */
+  color: red;
+}
 
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-    /* THEME */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    /* DEBUG. app overrides these */
-    background-color: #ffff0000;    /* transparent yellow */
-    color: red;
-  }
+#shell {
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 
+#appbody {
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  height: 100%;
+  background-color: #232223ff;
+  color: #f9f9f9ff;
+  overflow: scroll;
+}
 
-  #shell {
-    box-sizing: border-box;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-    flex-grow: 1;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+#toolbar {
+  text-align: center;
+  background-color: #171717ff;
+  color: #f9f9f9ff;
+}
 
-    /* DEBUG THEME OVERRIDES */
-    /* border: crimson solid 5px; */
-  }
-
-  #appbody {
-    /* overflow: scroll; */
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-    /* flex-grow: 1; */
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-
-    /* DEBUG */
-    /* background-color: #0000ff44; color: #ff0000; */
-    /* border: darkgreen solid 10px; */
-  }
-
+#statusbar {
+  text-align: center;
+  background-color: #171717ff;
+  color: #f9f9f9ff;
+}
