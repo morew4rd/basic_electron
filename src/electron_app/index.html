@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>My Electron App</title>
+  <title></title>
   <meta http-equiv="Content-Security-Policy"
     content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'" />
-  <link rel="stylesheet" href="../web_app/public/app_shared.css" />
+  <link rel="stylesheet" href="../web_app/public/main_shared.css" />
   <style>
     body {
       /* Electron specific things here */
@@ -14,7 +14,7 @@
       margin: 0;
     }
 
-    #shell {
+    #main_shell {
       /* Extras */
       border-color: #484848;
       border-style: solid;
@@ -25,14 +25,14 @@
     }
 
 
-    #titlebar {
+    #electron_titlebar {
       padding: 0 0 0 0;
       margin: 0 0 0 0;
       user-select: none;
       -webkit-user-select: none;
       -webkit-app-region: drag;
       text-align: center;
-      max-height: 2.2rem;  /* MATCH APPBODY */
+      max-height: 2.2rem;  /* MATCH main_body */
       flex-grow: 1;
       overflow: hidden;
 
@@ -41,54 +41,36 @@
       /* border: darkorange solid 10px; */
     }
 
-    #titlebar button
-    #titlebar input {
+    #electron_titlebar button
+    #electron_titlebar input {
       -webkit-app-region: no-drag;
     }
 
-    #appbody {
+    #main_body {
       max-height: calc(100vh - 2.2rem); /* MATCH TITLEBAR */
     }
 
 
   </style>
-  <script src="../web_app/public/app_shared.js"></script>
+  <script src="../web_app/public/main_shared.js"></script>
   <script src="../web_app/public/jquery-3.7.1.min.js"> </script>
 </head>
 
 <body>
 
-  <div id="shell">
-    <div id="titlebar">
-      <!--
-      <div style="height: 100%;  background-color: #434343ff; color: #f9f9f9;">
-        <div style="padding-top: 10px">
-          <span>My App </span>
-          <span><input type="text" placeholder="Something" /></span>
-          <button>Bla</button>
-        </div>
-      </div>
-      -->
-      <div style="height: 100%;  padding-top: 0.5rem; background-color: #434343ff; color: #e0e0e0;">
-        My Electron App
+  <div id="main_shell">
+    <div id="electron_titlebar">
+      <div id="electron_titlebar_text" style="height: 100%;  padding-top: 0.5rem; background-color: #434343ff; color: #e0e0e0;">
       </div>
     </div>
-
-    <div id="toolbar"></div>
-    <div id="appbody"></div>
-    <div id="statusbar"></div>
+    <div id="main_topbar"></div>
+    <div id="main_body"></div>
+    <div id="main_bottombar"></div>
   </div>
 
   <script>
     $(document).ready(function () {
-      $("#toolbar").load("../web_app/app/app_toolbar.html", (ev) => {
-        console.log("loaded app_toolbar.html");
-      });
-      $("#statusbar").load("../web_app/app/app_statusbar.html", (ev) => {
-        console.log("loaded app_statusbar.html");
-      });
-      $("#appbody").load("../web_app/app/app.html", (ev) => {
-        console.log("loaded app.html");
+      $("#main_body").load("../web_app/app/app.html", (ev) => {
       });
     });
   </script>

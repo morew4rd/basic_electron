@@ -1,7 +1,15 @@
-<div contenteditable="true" style="height: 100%">
+<style>
+    .myapp {
+        height: 100%;
+    }
+</style>
+
+<div contenteditable="true" class="myapp">
 
 </div>
+
 <script>
-    console.log(get_toolbar());
-    get_toolbar().html("<b>HAHA</b>llol")
+    set_title("my_app title");
+    get_toolbar().html("my_app toolbar");
+    get_statusbar().html("my_app statusbar");
 </script>

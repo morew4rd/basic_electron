@@ -2,41 +2,34 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>My Electron App</title>
+  <title></title>
   <meta
     http-equiv="Content-Security-Policy"
     content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'"
   />
-  <link rel="stylesheet" href="./public/app_shared.css" />
-  <script src="./public/app_shared.js"></script>
+  <link rel="stylesheet" href="./public/main_shared.css" />
+  <script src="./public/main_shared.js"></script>
   <style>
     body {
       padding: 0;
       margin: 0;
     }
 
-    #shell {
+    #main_shell {
       max-height: 100vh;
     }
   </style>
   <script src="./public/jquery-3.7.1.min.js"> </script>
 </head>
 <body>
-  <div id="shell">
-    <div id="toolbar"></div>
-    <div id="appbody"></div>
-    <div id="statusbar"></div>
+  <div id="main_shell">
+    <div id="main_topbar"></div>
+    <div id="main_body"></div>
+    <div id="main_bottombar"></div>
   </div>
   <script>
     $(document).ready(function() {
-      $("#toolbar").load("../app/app_toolbar.html", (ev) => {
-        console.log("loaded app_toolbar.html");
-      });
-      $("#statusbar").load("../app/app_statusbar.html", (ev) => {
-        console.log("loaded app_statusbar.html");
-      });
-      $("#appbody").load("../app/app.html", (ev) => {
-        console.log("loaded app.html");
+      $("#main_body").load("../app/app.html", (ev) => {
       });
     });
   </script>

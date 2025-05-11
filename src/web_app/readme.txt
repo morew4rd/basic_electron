@@ -1,0 +1,1 @@
+Files in this folder, except `index.html` is shared between the web app and the electron app.

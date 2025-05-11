@@ -12,7 +12,7 @@ body {
   color: red;
 }
 
-#shell {
+#main_shell {
   box-sizing: border-box;
   overflow: hidden;
   width: 100%;
@@ -25,7 +25,7 @@ body {
   flex-direction: column;
 }
 
-#appbody {
+#main_body {
   padding: 0;
   margin: 0;
   flex: 1;
@@ -35,13 +35,13 @@ body {
   overflow: scroll;
 }
 
-#toolbar {
+#main_topbar {
   text-align: center;
   background-color: #171717ff;
   color: #f9f9f9ff;
 }
 
-#statusbar {
+#main_bottombar {
   text-align: center;
   background-color: #171717ff;
   color: #f9f9f9ff;
