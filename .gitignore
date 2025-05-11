@@ -1,6 +1,7 @@
 # mg
 /.*
 !.gitignore
+!.vscode
 
 # node
 build/
